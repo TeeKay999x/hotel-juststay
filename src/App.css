@@ -810,3 +810,41 @@ li {
     padding: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  /* 1. Kill the badge if it's a CSS element */
+  .since-badge, [class*="badge"] { 
+    display: none !important; 
+  }
+
+  /* 2. Fix the overlap */
+  .hero-content {
+    padding-top: 80px; /* Pushes text down from the Navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* 3. Make the buttons visible and stacked */
+  .hero-btns {
+    display: flex;
+    flex-direction: column; /* Stacks them vertically */
+    gap: 15px; /* Space between the buttons */
+    width: 100%;
+    margin-top: 25px;
+    align-items: center;
+  }
+
+  .hero-btn-primary, .hero-btn-secondary {
+    width: 85% !important; /* Makes them wide enough to tap easily */
+    padding: 14px;
+    font-size: 1rem;
+    position: static !important; /* Ensures they aren't floating weirdly */
+  }
+
+  /* 4. Shrink text so it doesn't push buttons off-screen */
+  .hero-content h1 { font-size: 1.8rem; }
+  .hero-content h2 { font-size: 1.3rem; }
+}
+
