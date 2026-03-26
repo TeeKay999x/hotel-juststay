@@ -2,6 +2,30 @@
   box-sizing: border-box;
 }
 
+/* In your index.css or App.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  /* Playfair is classic 'Expensive Hotel' style. Poppins is clean. */
+  --header-font: 'Playfair Display', serif;
+  --body-font: 'Poppins', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--header-font);
+  font-weight: 700;
+  letter-spacing: 1px; /* Gives it that 'Editor' look */
+}
+
+p, button, span {
+  font-family: var(--body-font);
+  font-weight: 400;
+}
+
+
+
+
+
 body {
   margin: 0;
   padding: 0;
