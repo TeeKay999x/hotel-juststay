@@ -764,3 +764,49 @@ li {
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
+
+
+/* --- Mobile Fix for iPhone 8 / Android --- */
+@media (max-width: 480px) {
+  .hero {
+    height: 100vh; /* Ensures the background covers the whole screen */
+    display: flex;
+    align-items: center; /* Centers everything vertically */
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding-top: 60px; /* Gives space for the Navbar */
+    width: 90%; /* Stops text from hitting the edges */
+    margin: 0 auto;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem; /* Shrinks 'Hotel Just Stay' */
+    margin-bottom: 5px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.4rem; /* Shrinks 'Rivers State Nigeria' */
+    margin-bottom: 15px;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  .hero-btns {
+    display: flex;
+    flex-direction: column; /* Stacks buttons so they don't squash each other */
+    gap: 12px;
+    align-items: center;
+  }
+
+  .hero-btn-primary, .hero-btn-secondary {
+    width: 100%; /* Full width buttons look better on mobile */
+    max-width: 280px;
+    padding: 12px;
+  }
+}
